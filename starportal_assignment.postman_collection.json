@@ -1,0 +1,708 @@
+{
+	"info": {
+		"_postman_id": "3cd2db40-add8-4ab8-a014-ca482de25f67",
+		"name": "starportal_assignment",
+		"description": "swagger docs was having issues , so i added the postman docs too.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29795181"
+	},
+	"item": [
+		{
+			"name": "service-users",
+			"item": [
+				{
+					"name": "resigter-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"vaibhav\",\r\n    \"email\": \"vaibhav@vaibhav.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ragi\",\r\n    \"email\": \"ragi@ragi.com\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4001/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4001",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-VsBOzzntrokLHuPEVLiu3JjEnj4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 12:25:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"ragi\",\n    \"email\": \"ragi@ragi.com\",\n    \"password\": \"$2a$10$5X27J.Co53Abi/jmsuj0f./I/.De38rDZv/EnR/ljjZjAnNQu7uZ2\",\n    \"connected\": false,\n    \"_id\": \"668d2c1fa68f6007cde18516\",\n    \"id\": \"aa44a574-86dc-4487-a277-9d2cd3ef5302\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "login-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nilu@nilu.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nilu@nilu.com\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4001/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4001",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-o5sjrt9p5Bi0YIuyDySNZBN5ZZM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 12:27:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZTc1ZDVkLTgwOWYtNGQ5OS1hMmYwLTlmMzZkZjI5NWQzYyIsImlhdCI6MTcyMDUyODAyMywiZXhwIjoxNzIwNjE0NDIzfQ.W5iYiDOVuR3DK3KGMlsViHIRQ-C3LKcHDtDV8sGSUO4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user-by-id",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/api/user/b541d61e-0f78-449d-834c-5773f999e34a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"user",
+								"b541d61e-0f78-449d-834c-5773f999e34a"
+							]
+						},
+						"description": "put the user UUID here in params."
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4001/api/user/b541d61e-0f78-449d-834c-5773f999e34a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4001",
+									"path": [
+										"api",
+										"user",
+										"b541d61e-0f78-449d-834c-5773f999e34a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-auifAwSU8UkDPQV72tc5ee5mce0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 12:27:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"668a830d81191ce569d4dfab\",\n    \"username\": \"Sunil\",\n    \"email\": \"sunil@sunil.com\",\n    \"connected\": false,\n    \"id\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "service-notification",
+			"item": [
+				{
+					"name": "add-notification",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZTc1ZDVkLTgwOWYtNGQ5OS1hMmYwLTlmMzZkZjI5NWQzYyIsImlhdCI6MTcyMDU5NTk4NiwiZXhwIjoxNzIwNjgyMzg2fQ.kRAGjGBzrJR2mG6XvtBa0TX-bC-SB7iFv97FDAjpwKM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"hey message 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\": \"first message\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/notifications",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"notifications"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-PEPf9uENCDyTWUHFSvSnfcqAoo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 13:53:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n    \"message\": \"first message\",\n    \"read\": false,\n    \"_id\": \"668a9dcd9fc9ade9c920ceef\",\n    \"id\": \"855a9e03-9d14-4e51-bfef-8ef962e6a5a0\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get-notifications",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZTc1ZDVkLTgwOWYtNGQ5OS1hMmYwLTlmMzZkZjI5NWQzYyIsImlhdCI6MTcyMDU5NTk4NiwiZXhwIjoxNzIwNjgyMzg2fQ.kRAGjGBzrJR2mG6XvtBa0TX-bC-SB7iFv97FDAjpwKM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4002/api/notifications?msg_per_page=3&curr_page_no=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "msg_per_page",
+									"value": "3",
+									"description": "optional but provide both while paginating"
+								},
+								{
+									"key": "curr_page_no",
+									"value": "2",
+									"description": "optional "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4002/api/notifications",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"notifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-35dO66m9vasouUKHuYmukerhFEk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jul 2024 13:57:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"668a9dcd9fc9ade9c920ceef\",\n        \"userId\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n        \"message\": \"first message\",\n        \"read\": false,\n        \"id\": \"855a9e03-9d14-4e51-bfef-8ef962e6a5a0\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"668a9e039fc9ade9c920cef1\",\n        \"userId\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n        \"message\": \"second message\",\n        \"read\": false,\n        \"id\": \"b7d51153-5d55-4bc7-9582-1f80142dd672\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "notification-by-id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZTc1ZDVkLTgwOWYtNGQ5OS1hMmYwLTlmMzZkZjI5NWQzYyIsImlhdCI6MTcyMDU5NTk4NiwiZXhwIjoxNzIwNjgyMzg2fQ.kRAGjGBzrJR2mG6XvtBa0TX-bC-SB7iFv97FDAjpwKM",
+								"description": "required everywhere",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4002/api/notifications/855a9e03-9d14-4e51-bfef-8ef962e6a5a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"notifications",
+								"855a9e03-9d14-4e51-bfef-8ef962e6a5a0"
+							]
+						},
+						"description": "put the UUID here in params"
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4002/api/notifications/855a9e03-9d14-4e51-bfef-8ef962e6a5a0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"notifications",
+										"855a9e03-9d14-4e51-bfef-8ef962e6a5a0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-/N3HX32DCZJ1+wCkJZkwagPyhm0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 12:31:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"668a9dcd9fc9ade9c920ceef\",\n    \"userId\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n    \"message\": \"first message\",\n    \"read\": false,\n    \"id\": \"855a9e03-9d14-4e51-bfef-8ef962e6a5a0\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update-notification",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZTc1ZDVkLTgwOWYtNGQ5OS1hMmYwLTlmMzZkZjI5NWQzYyIsImlhdCI6MTcyMDU5NTk4NiwiZXhwIjoxNzIwNjgyMzg2fQ.kRAGjGBzrJR2mG6XvtBa0TX-bC-SB7iFv97FDAjpwKM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/notifications/855a9e03-9d14-4e51-bfef-8ef962e6a5a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"notifications",
+								"855a9e03-9d14-4e51-bfef-8ef962e6a5a0"
+							]
+						},
+						"description": "it is just updating the read value to true."
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/notifications/855a9e03-9d14-4e51-bfef-8ef962e6a5a0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"notifications",
+										"855a9e03-9d14-4e51-bfef-8ef962e6a5a0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-F+wdpicrKtb6SrIGfLA8ETa0h4Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 12:31:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"668a9dcd9fc9ade9c920ceef\",\n    \"userId\": \"b541d61e-0f78-449d-834c-5773f999e34a\",\n    \"message\": \"first message\",\n    \"read\": true,\n    \"id\": \"855a9e03-9d14-4e51-bfef-8ef962e6a5a0\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			],
+			"description": "in all operation of service-notification, token is required."
+		}
+	]
+}

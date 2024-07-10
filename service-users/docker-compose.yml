@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  service-user-app:
+    build: .
+    container_name: service-user-app
+    ports:
+      - "4001:4001"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/notification_system
+      - RABBITMQ_URI=amqp://rabbitmq
+      - JWT_SECRET=your_jwt_secret
+    depends_on:
+      - mongo
+      - rabbitmq

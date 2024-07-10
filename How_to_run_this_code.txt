@@ -1,0 +1,22 @@
+Description:-
+
+There are three services, service-users, service-notifications and service-websocket in this microservice architecture. running respectively on ports 4001,4002 and 4003.
+
+service-users handle register and login of user, notifications handle the msg/notification by the users and websoket handles the real time data sending.
+
+steps to run:-
+
+1) RabbitMQ should be up and running.
+
+2) (clone repo from github) ,Navigate to root directory, e.g- service-notifications and run >>npm install to install all dependencies.
+
+3) run each service separately, cmd >> npm run start:dev
+
+4) To test ,one can open the signup.html in the browser, signup there, then login and do the same in an incognito window to avoid the localstorage clash.
+
+5) chat there , and it will be reflected in the other page as well.
+
+note-> swagger ui was not behaving as expected, (will fix later), but due to time constraint I have documented in postman.(will attach)
+
+visit for api docs -> 
+  https://documenter.getpostman.com/view/29795181/2sA3e2g9yY

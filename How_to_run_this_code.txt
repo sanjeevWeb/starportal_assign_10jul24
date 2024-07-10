@@ -19,5 +19,6 @@ steps to run:-
 note-> a) swagger ui was not behaving as expected, (will fix later), but due to time constraint I have documented in postman.(will attach)
 
 b) lint added at last and , it was creting some merge coflict, so i creted a new branch abd added the code that is final-task, so it can be cloned also.
+c) make aprropriate env variables like mongodb uri etc
 visit for api docs -> 
   https://documenter.getpostman.com/view/29795181/2sA3e2g9yY
